@@ -1,6 +1,6 @@
 {
   "name": "@melacod/react-modal",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Basic React Modal",
   "author": "melacod",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^17.0.0"
   },
   "devDependencies": {
     "@babel/plugin-syntax-jsx": "^7.17.12",
