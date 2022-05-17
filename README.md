@@ -7,14 +7,14 @@
 ## Install
 
 ```bash
-npm install --save react-modal
+npm install --save @melacod/react-modal
 ```
 
 ## Usage
 
 ```jsx
 import React, { useState } from 'react'
-import Modal from 'react-modal'
+import Modal from '@melacod/react-modal'
 
 const BasicExample = () => {
 
@@ -37,7 +37,7 @@ const BasicExample = () => {
 
 ```jsx
 import React, { useState } from 'react'
-import Modal from 'react-modal'
+import Modal from '@melacod/react-modal'
 
 const CustomizeFooter = () => {
   return <p>My custom footer</p>
