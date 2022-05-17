@@ -13,15 +13,61 @@ npm install --save react-modal
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { useState } from 'react'
+import Modal from 'react-modal'
 
-import MyComponent from 'react-modal'
-import 'react-modal/dist/index.css'
+const BasicExample = () => {
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+  const [showModal, setShowModal] = useState(false)
+  const hideModal = () => showModal && setShowModal(false)
+
+  return (
+    <button onClick={() => setShowModal(true)}>
+      Basic modal
+    </button>
+
+    <Modal show={showModal} onClickCloseBtn={hideModal} title='Basic modal'>
+      <p>I am a basic modal</p>
+    </Modal>
+  )
+}
+```
+
+## Advanced usage
+
+```jsx
+import React, { useState } from 'react'
+import Modal from 'react-modal'
+
+const CustomizeFooter = () => {
+  return <p>My custom footer</p>
+}
+
+const CustomizeHeader = () => {
+  return <p>My custom header</p>
+}
+
+const AdvancedExample = () => {
+
+  const [showModal, setShowModal] = useState(false)
+  const hideModal = () => showModal && setShowModal(false)
+
+  return (
+    <button onClick={() => setShowModal(true)}>
+      Advanced modal
+    </button>
+
+    <Modal
+      show={showModal}
+      onClickCloseBtn={hideModal  }
+      footer={<CustomizeFooter />}
+      header={<CustomizeHeader />}
+      backgroundColor='lightyellow'
+      backdropBackgroundColor='rgba(255,165,0, 0.5)'
+    >
+      <p>I am an advanced modal</p>
+    </Modal>
+  )
 }
 ```
 
